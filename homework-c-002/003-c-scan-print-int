@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+    int number;/*ініціалізація змінної*/
+    printf("Enter an integer: ");  /*вивод строки*/
+    
+    scanf("%d", &number);  /*ввод в строку вводу*/
+    
+    printf("You entered: %d", number);/*вивод строки*/
+    return 0;
+}

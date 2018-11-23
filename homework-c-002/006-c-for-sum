@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int num, count, sum = 0;/*ініціалізація змінних*/
+
+    printf("Enter a positive integer: ");/*вивод строки*/
+    scanf("%d", &num);/*ввод в строку вводу*/
+    for(count = 1; count <= num; ++count)/*ініціалізація циклу оцінка аргуменьів циклу*/
+    {
+        sum += count;/*числові операції*/
+    }
+
+    printf("Sum = %d", sum);/*вивод строки*/
+
+    return 0;
+}
