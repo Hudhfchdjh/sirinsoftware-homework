@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+#define IN 1
+#define OUT 0
+
+int main()
+{
+    int c;
+    int logh;
+    logh = OUT;
+      while((c = getchar()) != EOF){
+        if(c != '\n' && c != ' ' && c != '\t'){
+          logh = IN;
+          putchar(c);
+        }
+          else if(logh == IN)
+          {
+                  logh = OUT;
+                  putchar('\n');
+          }
+    }
+    return 0;
+}
+//           if(c == '\n')
+//           logh = OUT;
+//             else if(logh == OUT){
+//               logh = IN;
+//               printf("%s\n" ,c);
+//             }
+//           return 0;
+//       }
+// }
