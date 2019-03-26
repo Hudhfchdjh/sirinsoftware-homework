@@ -1,5 +1,8 @@
-#include<stdio.h>
+/*Выясните, что произойдет, если в строковую константу аргумента printf вставить \с, где с
+— символ, не входящий в представленный выше список.*/
 
-int main(){
-  printf("Hello, World\c");
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World\c");
 }
