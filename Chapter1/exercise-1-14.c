@@ -1,11 +1,12 @@
+/*Напишите программу, печатающую гистограммы частот встречаемости вводимых
+символов.*/
 
 #include <stdio.h>
 
-  #define MAXLEN 10
+#define MAXLEN 10
 
-
-  int main()
-  {
+int main()
+{
       int i, c, ncw, j;
       int wlength[MAXLEN];
 
@@ -13,11 +14,11 @@
       for (i = 0; i < MAXLEN; ++i)
           wlength[i] = 0;
 
-      while ((c = getchar()) != EOF) {
-          if (c == ' ' || c == '\n' || c == '\t'){
-              wlength[ncw] = wlength[ncw] + 1;
+          while ((c = getchar()) != EOF) {
+              if (c == ' ' || c == '\n' || c == '\t'){
+                  wlength[ncw] = wlength[ncw] + 1;
               // printf("sos => %d\n" ,wlength[ncw]);
-              ncw = 0;
+                    ncw = 0;
           }
           else
               ++ncw;

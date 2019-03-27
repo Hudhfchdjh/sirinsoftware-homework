@@ -1,3 +1,6 @@
+/*Напишите программу, которая будет в каждой вводимой строке заменять стоящие подряд
+символы пробелов и табуляций на один пробел и удалять пустые строки.*/
+
 #include <stdio.h>
 
   #define MAXLINE 1000 /* максимальный размер вводимой строки + 1 */
@@ -5,8 +8,8 @@
   int getl(char line[], int maxline);
   int counter(char to[], char from[]);
 
-  int main()
-  {
+int main()
+{
       int len; /* длина текущей строки */
       char line[MAXLINE]; /* текущая строка */
       char newline[MAXLINE]; /* новая строка */
@@ -17,7 +20,7 @@
           printf("%s", newline);
       }
       return 0;
-  }
+}
 
   int getl(char s[], int lim)
   {
@@ -32,8 +35,8 @@
       s[i] = '\0';
       return i;
   }
-  int counter(char newe_str[], char old_str[])
-  {
+int counter(char newe_str[], char old_str[])
+{
       int c, i, j, sflag;
 
       i = 0;
@@ -61,4 +64,4 @@
       }
       newe_str[j] = '\0';
       return j;
-  }
+}
