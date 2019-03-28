@@ -19,10 +19,10 @@ int main()
 
       max = 0;
       len = 0;
-      while ((tmp = getl(line, MAXLINE)) > 0) {
+      while((tmp = getl(line, MAXLINE)) > 0){
           len += tmp;
-          if (tmp != MAXLINE-1) {
-              if (len > max) {
+          if (tmp != MAXLINE-1){
+              if (len > max){
                   max = len;
                   copy(longest, line);
               }
@@ -41,7 +41,7 @@ int main()
 
      for (i = 0; i < lim-1 && (c = getchar()) != EOF && c != '\n'; ++i)
           s[i] = c;
-          if (c == '\n') {
+          if (c == '\n'){
               s[i] = c;
               ++i;
           }
@@ -55,6 +55,6 @@ int main()
      int i;
 
      i = 0;
-     while ((to[i] = from[i]) != '\0')
+     while((to[i] = from[i]) != '\0')
             ++i;
  }

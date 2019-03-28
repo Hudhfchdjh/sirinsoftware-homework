@@ -14,7 +14,7 @@ int main()
       for (i = 0; i < MAXLEN; ++i)
           wlength[i] = 0;
 
-          while ((c = getchar()) != EOF) {
+          while((c = getchar()) != EOF) {
               if (c == ' ' || c == '\n' || c == '\t'){
                   wlength[ncw] = wlength[ncw] + 1;
               // printf("sos => %d\n" ,wlength[ncw]);

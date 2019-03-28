@@ -15,22 +15,20 @@ int main(){
 }
 void escape( char a[], char b[]){
   int i, j;
-  for(i = 0, j = 0; b[i];++i, ++j)
+  for(i = 0, j = 0; b[i] != '\0';++i, ++j)
         switch(a[i]){
           case '\n':
-          b[j++] = ' ';
+          b[j++] = '\\';
           b[j] = 'n';
           break;
           case '\t':
-          if(a[i] == ' '){
-          b[j++] = ' ';
+          b[j++] = '\\';
           b[j] = 't';
           }
           break;
           default:
           b[j] = a[i];
           break;
-          b[j] = a[i];
         }
       }
 

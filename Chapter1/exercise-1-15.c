@@ -7,6 +7,7 @@ int set(int a)
 {
     return 5 * (a - 32) / 9;
 }
+
 int main()
 {
     int fahr;
@@ -15,7 +16,7 @@ int main()
     upper = 300; /* верхняя граница */
     step = 20; /* шаг */
     fahr = lower;
-    while (fahr <= upper) {
+    while(fahr <= upper) {
           printf ("%d\t%d\n", fahr, set(fahr));
           fahr = fahr + step;
     }

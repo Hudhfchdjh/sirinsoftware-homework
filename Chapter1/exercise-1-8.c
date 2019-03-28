@@ -6,7 +6,7 @@ int main()
 {
     int c, nl;
     nl = 0;
-    while ((c = getchar()) != EOF)
+    while((c = getchar()) != EOF)
     if (c == '\n')
         ++nl;
     else if (c == ' ')

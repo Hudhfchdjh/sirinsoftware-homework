@@ -18,7 +18,7 @@ int main()
       char newline[MAXLINE]; /* новая строка */
 
       len = 0;
-      while ((len = getl(line, MAXLINE)) > 0) {
+      while((len = getl(line, MAXLINE)) > 0){
           entab(newline, line);
           printf("%s", newline);
       }
@@ -30,7 +30,7 @@ int getl(char s[], int lim)
 
       for (i = 0; i < lim-1 && (c = getchar()) != EOF && c != '\n'; ++i)
           s[i] = c;
-      if (c == '\n') {
+      if (c == '\n'){
           s[i] = c;
           ++i;
       }
@@ -43,10 +43,10 @@ void entab(char to[], char from[])
       int i, j, k, ns, nt, c, m;
 
       i = j = ns = nt = 0;
-      while ((c = from[i]) != '\0') {
+      while((c = from[i]) != '\0'){
           if (c == ' ')
               ++ns;
-          else if (ns > 0) {
+          else if (ns > 0){
               nt = ns/(TABSIZE-1);
               for (m = 0; m < nt; ++m, ++j)
                   to[j] = '\t';
