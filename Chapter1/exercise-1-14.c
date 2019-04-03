@@ -14,21 +14,19 @@ int main()
       for (i = 0; i < MAXLEN; ++i)
           wlength[i] = 0;
 
-          while((c = getchar()) != EOF) {
-              if (c == ' ' || c == '\n' || c == '\t'){
+          while ((c = getchar()) != EOF) {
+              if (c == ' ' || c == '\n' || c == '\t') {
                   wlength[ncw] = wlength[ncw] + 1;
-              // printf("sos => %d\n" ,wlength[ncw]);
                     ncw = 0;
+              } else
+                    ++ncw;
           }
-          else
-              ++ncw;
-      }
 
-   for (i = 0; i < MAXLEN; ++i){
+   for (i = 0; i < MAXLEN; ++i) {
          printf("%d : ", i);
          for (j = 0; j <= wlength[i]; ++j)
              printf("|");
          printf(" > %d\n", wlength[i]);
-  }
+   }
     return 0;
 }

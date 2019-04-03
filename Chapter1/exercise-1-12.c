@@ -11,15 +11,14 @@ int main()
     int c;
     int logh;
     logh = OUT;
-    while((c = getchar()) != EOF){
-          if (c != '\n' && c != ' ' && c != '\t'){
-              logh = IN;
-              putchar(c);
+    while ((c = getchar()) != EOF) {
+          if (c != '\n' && c != ' ' && c != '\t') {
+                logh = IN;
+                putchar(c);
+          } else if (logh == IN) {
+                   logh = OUT;
+                   putchar('\n');
           }
-          else if (logh == IN){
-                  logh = OUT;
-                  putchar('\n');
-          }
-      }
+     }
      return 0;
 }

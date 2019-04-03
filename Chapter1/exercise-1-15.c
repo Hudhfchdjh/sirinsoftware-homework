@@ -16,7 +16,7 @@ int main()
     upper = 300; /* верхняя граница */
     step = 20; /* шаг */
     fahr = lower;
-    while(fahr <= upper) {
+    while (fahr <= upper) {
           printf ("%d\t%d\n", fahr, set(fahr));
           fahr = fahr + step;
     }

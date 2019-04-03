@@ -14,7 +14,7 @@ int getl(char s[], int lim)
 
       for (i = 0; i < lim-1 && (c = getchar()) != EOF && c != '\n'; ++i)
           s[i] = c;
-      if (c == '\n'){
+      if (c == '\n') {
           s[i] = c;
           ++i;
       }
@@ -26,15 +26,15 @@ void detab(char to[], char from[])
 {
     int i, j, k;
     i = j = 0;
-    while((to[j] = from[i]) != '\0'){
-    if (to[j] == '\t')
-        for (k = 0; k < MAZV; ++k, ++j)
-            to[j] = ' ';
-    else
-        ++j;
-    ++i;
-    }
-    to[j] = '\0';
+    while ((to[j] = from[i]) != '\0') {
+        if (to[j] == '\t'){
+            for (k = 0; k < MAZV; ++k, ++j)
+                to[j] = ' ';
+        } else
+            ++j;
+        ++i;
+        }
+        to[j] = '\0';
 }
 
 int main()
@@ -42,6 +42,6 @@ int main()
     int len;
     char line[MAZV];
     char newline[MAZX];
-    while(len = getl(line, MAZV))
+    while (len = getl(line, MAZV))
         detab(newline, line);
 }

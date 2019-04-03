@@ -15,7 +15,7 @@ int main()
       char newline[MAXLINE]; /* новая строка */
 
       len = 0;
-      while ((len = getl(line, MAXLINE)) > 0){
+      while ((len = getl(line, MAXLINE)) > 0) {
           if ((len = counter(newline, line)) != 1)
           printf("%s", newline);
       }
@@ -27,13 +27,13 @@ int main()
       int c, i;
 
       for (i = 0; i < lim-1 && (c = getchar()) != EOF && c != '\n'; ++i)
-          s[i] = c;
-      if (c == '\n') {
-          s[i] = c;
-          ++i;
-      }
-      s[i] = '\0';
-      return i;
+        s[i] = c;
+          if (c == '\n') {
+              s[i] = c;
+              ++i;
+          }
+          s[i] = '\0';
+          return i;
   }
 int counter(char newe_str[], char old_str[])
 {
@@ -42,15 +42,14 @@ int counter(char newe_str[], char old_str[])
       i = 0;
       j = 0;
       sflag = 0;
-      while((c = old_str[i]) != '\n'){
-          if (c == ' ' || c == '\t'){
+      while ((c = old_str[i]) != '\n') {
+          if (c == ' ' || c == '\t') {
               if (sflag == 0){
                   newe_str[j] = ' ';
                   sflag = 1;
                   ++j;
               }
-          }
-          else {
+          } else {
               newe_str[j] = c;
               sflag = 0;
               ++j;
@@ -58,7 +57,7 @@ int counter(char newe_str[], char old_str[])
           ++i;
       }
 
-      if (c == '\n'){
+      if (c == '\n') {
           newe_str[j] = c;
           ++j;
       }
