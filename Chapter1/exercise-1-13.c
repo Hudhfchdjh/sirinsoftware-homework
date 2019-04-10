@@ -3,7 +3,8 @@
 
 #include <stdio.h>
 
-int main(){
+int main()
+{
     int c, i, j = 0;
     while ((c = getchar()) != EOF) {
         j++;

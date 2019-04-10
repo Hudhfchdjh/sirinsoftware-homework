@@ -18,7 +18,7 @@ int main()
       char newline[MAXLINE]; /* новая строка */
 
       len = 0;
-      while((len = getl(line, MAXLINE)) > 0){
+      while ((len = getl(line, MAXLINE)) > 0) {
           entab(newline, line);
           printf("%s", newline);
       }
@@ -44,9 +44,9 @@ void entab(char to[], char from[])
 
       i = j = ns = nt = 0;
       while((c = from[i]) != '\0'){
-          if (c == ' ')
+          if (c == ' ') {
               ++ns;
-          else if (ns > 0){
+          } else if (ns > 0) {
               nt = ns/(TABSIZE-1);
               for (m = 0; m < nt; ++m, ++j)
                   to[j] = '\t';
@@ -55,10 +55,9 @@ void entab(char to[], char from[])
               to[j] = c;
               ns = 0;
               ++j;
-          }
-          else {
-              to[j] = c;
-              ++j;
+          }   else {
+                to[j] = c;
+                ++j;
           }
           ++i;
       }

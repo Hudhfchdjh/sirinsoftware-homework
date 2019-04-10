@@ -1,7 +1,11 @@
+/*Напишите функцию itob(n, s, b), которая переводит целое n в строку s,
+представляющую число по основанию b. В частности, itob(n, s, 16) помещает в s текст числа n в
+шестнадцатеричном виде.*/
+
 #include <stdio.h>
-  #include <string.h>
-  #include <stdlib.h>
-  #include <limits.h>
+#include <string.h>
+#include <stdlib.h>
+#include <limits.h>
 
   void itob(int n, char s[], int b);
   void reverse(char s[]);

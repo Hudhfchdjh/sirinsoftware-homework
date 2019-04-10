@@ -10,7 +10,7 @@ int main()
   int lim = 10;
   for (i = 0; i < lim-1; ++i) {
         if ((c = getchar()) != EOF) {
-            if(c != '\n') {
+            if (c != '\n') {
             } else {
                 break;
             }

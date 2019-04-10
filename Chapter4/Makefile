@@ -1,5 +1,8 @@
-all: exercise-4-2 exercise-4-3 exercise-4-11 exercise-4-12-x ostatok_ot_delenia_test
+all: exercise-4-2 exercise-4-3 exercise-4-11 exercise-4-12-x ostatok_ot_delenia_test exercise-4-1-x
 
+exercise-4-1-x: exercise-4-1-x.c
+	gcc -g -Wall exercise-4-1-x.c -o exercise-4-1-x
+	
 exercise-4-2: exercise-4-2.c
 	gcc -g -Wall exercise-4-2.c -o exercise-4-2 -lm
 
@@ -20,3 +23,4 @@ clean:
 	rm -f exercise-4-11
 	rm -f exercise-4-12-x
 	rm -f ostatok_ot_delenia_test
+	rm -f exercise-4-1-x
