@@ -7,31 +7,33 @@ double atog (char s[])
 	double val, power, inspak, bot, bisik;
 	int i, sign, desik;
 	for (i = 0; isspace (s[i]); i++);
-	sign = (s[i] == '-') ? -1 : 1;
+		sign = (s[i] == '-') ? -1 : 1;
 	if (s[i] == '+' || s[i] == '-')
-	i++;
+		i++;
 	for (val = 0.0; isdigit (s[i]); i++)
-	val = 10.0 * val + (s[i] - '0');
+		val = 10.0 * val + (s[i] - '0');
 	if (s[i] =='.')
-	i++;
+		i++;
 	for (power = 1.0; isdigit(s[i]); i++) {
-	val = 10.0 * val + (s[i] - '0');
-	power *= 10.0;
-}
-	if(s[i] == 'e' || s[i] == 'E')
-	i++;
+		val = 10.0 * val + (s[i] - '0');
+		power *= 10.0;
+	}
+	if (s[i] == 'e' || s[i] == 'E')
+		i++;
 	desik = (s[i] == '-') ? -1 : 1;
-	i++;
+		i++;
 	if (s[i] == '+' || s[i] == '-')
-	i++;
-	for(inspak = 0.0; isdigit(s[i]); i++)
-	inspak = 10.0 * inspak + (s[i] - '0');
+		i++;
+	for (inspak = 0.0; isdigit(s[i]); i++)
+		inspak = 10.0 * inspak + (s[i] - '0');
 	bisik = pow(10.0, inspak);
 	bot = sign * val / power;
-	if(desik == 1)
-	return bot * bisik;
-	else
+	if (desik == 1) {
+		return bot * bisik;
+	}
+	else {
 		return bot / bisik;
+	}
 }
 int main()
   {
